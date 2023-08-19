@@ -22,9 +22,9 @@ public class ControleFilme {
 		
 		Diretor diretor = cadastrarDiretor();
 
-		//ArrayList autores = cadastrarAutores();
+		//ArrayList atores = cadastrarAtores();
 		
-		Filme filme = new Filme(nome, data, orcamento, diretor, autores);
+		Filme filme = new Filme(nome, data, orcamento, diretor, atores);
 		
 		listaFilmes.add(filme);	
 	}
