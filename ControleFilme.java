@@ -35,7 +35,11 @@ public class ControleFilme {
 	//} (usar um while para cadastrar até o usuário não querer mais)
 	
 	public Filme buscarNomeFilme(String nome){
-
+		for (Filme filme : listaFilmes) {
+			if (filme.getNome().equalsIgnoreCase(nome)) {
+					return filme;
+			}
+		}
+		return null;
 	}
-
 }
