@@ -33,23 +33,21 @@ public class ControleFilme {
 	//public ArrayList<Ator> cadastrarAtor() { 
 	//} (usar um while para cadastrar até o usuário não querer mais)
 
-	public void buscarNomeFilme(String nomeBusca) {
+	public void buscarNomeFilme() {
 
-		System.out.println("Digite o nome do filme.");
+		System.out.println("Digite o nome do filme: ");
 		nomeBusca = sc.nextLine();
 
 		boolean encontrado = false;
 		for (Filme filme : listaFilmes) {
 			if (filme.getNome().equalsIgnoreCase(nomeBusca)) {
-				System.out.println("Nome: " + filme.getNome());
-				System.out.println("Data de lançamento: " + filme.getDataLancamento());
-				System.out.println("Orçamento: " + filme.getOrcamento());
-				System.out.println("Diretor: " + filme.getNomeDiretor());
+				//METODO DO GUSTAVO
 				encontrado = true;
 				break;
-			} else {
-				System.out.print("Não encontrado.");
 			}
+		}
+		if (encontrado == false) {
+			System.out.println("Não encontrado.");
 		}
 	}
 }

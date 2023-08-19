@@ -1,12 +1,13 @@
 package filme;
 
 public class Pessoa {
-    private String nome;
+    private String nomePessoa;
 
-    public void nomePessoa() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Qual é o nome? ");
-        this.nome = scanner.nextLine();
+    public String getNome() {
+        return nome;
     }
-    scanner.close();
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
