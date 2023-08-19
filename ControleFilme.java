@@ -34,7 +34,8 @@ public class ControleFilme {
 	//public ArrayList<Ator> cadastrarAtor() { 
 	//} (usar um while para cadastrar até o usuário não querer mais)
 	
-	//public void buscarNomeFilme(String nome){
-	//}
+	public Filme buscarNomeFilme(String nome){
+
+	}
 
 }
