@@ -19,22 +19,29 @@ public class ControleFilme {
 		
 		System.out.print("Digite o orçamento do filme: ");
 		double orcamento = Double.parseDouble(sc.nextLine());
+
+		String descricao = "";
+		Diretor diretor = cadastrarDiretor();
+		ArrayList atores = cadastrarAtor();
 		
-		//Diretor diretor = cadastrarDiretor();
-		//ArrayList autores = cadastrarAutores();
-		
-		Filme filme = new Filme(nome, data, orcamento, diretor, autores);
+		Filme filme = new Filme(nome, data, orcamento, descricao, diretor);
 		
 		listaFilmes.add(filme);	
 	}
 	
-	//public Diretor cadastrarDiretor() { 
-	//}
+	public Diretor cadastrarDiretor() {
+		return null;
+	}
+
+	// (usar um while para cadastrar até o usuário não querer mais)
+	public ArrayList<Ator> cadastrarAtor() {
+		return null;
+	}
 	
-	//public ArrayList<Ator> cadastrarAtor() { 
-	//} (usar um while para cadastrar até o usuário não querer mais)
-	
-	//public void buscarNomeFilme(String nome){
-	//}
+	public void buscarNomeFilme(String nome){}
+
+	public static void listarFilmes() {}
+	public static void listarAtores() {}
+	public static void listarDiretores(){}
 
 }
