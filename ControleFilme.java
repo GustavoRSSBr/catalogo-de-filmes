@@ -19,7 +19,7 @@ public class ControleFilme {
 		
 		System.out.print("Digite o orçamento do filme: ");
 		double orcamento = Double.parseDouble(sc.nextLine());
-		
+
 		Diretor diretor = cadastrarDiretor();
 
 		private ArrayList<Atores> listaAtores = new ArrayList<>();
@@ -30,6 +30,7 @@ public class ControleFilme {
 		listaFilmes.add(filme);	
 	}
 
+	//cadastrar diretor
 
 	//public ArrayList<Ator> cadastrarAtor() { 
 	//} (usar um while para cadastrar até o usuário não querer mais)
