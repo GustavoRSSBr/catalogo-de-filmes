@@ -21,16 +21,15 @@ public class ControleFilme {
 		double orcamento = Double.parseDouble(sc.nextLine());
 		
 		Diretor diretor = cadastrarDiretor();
+
 		//ArrayList autores = cadastrarAutores();
 		
 		Filme filme = new Filme(nome, data, orcamento, diretor, autores);
 		
 		listaFilmes.add(filme);	
 	}
-	
-	public Diretor cadastrarDiretor() {
-	}
-	
+
+
 	//public ArrayList<Ator> cadastrarAtor() { 
 	//} (usar um while para cadastrar até o usuário não querer mais)
 	
