@@ -9,7 +9,7 @@ public class ControleFilme {
 	
 	private ArrayList<Filme> listaFilmes = new ArrayList<>();
 	
-	public Filme CadastrarFilme() {
+	public void CadastrarFilme() {
 		
 		System.out.print("Digite o nome do filme: ");
 		String nome = sc.nextLine();
@@ -21,14 +21,20 @@ public class ControleFilme {
 		double orcamento = Double.parseDouble(sc.nextLine());
 		
 		//Diretor diretor = cadastrarDiretor();
-		//List Autores = cadastrarAutores;
+		//ArrayList autores = cadastrarAutores();
 		
+		Filme filme = new Filme(nome, data, orcamento, diretor, autores);
 		
+		listaFilmes.add(filme);	
 	}
 	
 	//public Diretor cadastrarDiretor() { 
 	//}
 	
+	//public ArrayList<Ator> cadastrarAtor() { 
+		//} (usar um while para cadastrar até o usuário não querer mais)
 	
+	//public void buscarNomeFilme(String nome){
+          //}
 
 }
