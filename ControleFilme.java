@@ -22,7 +22,8 @@ public class ControleFilme {
 		
 		Diretor diretor = cadastrarDiretor();
 
-		//ArrayList atores = cadastrarAtores();
+		private ArrayList<Atores> listaAtores = new ArrayList<>();
+		private Atores atores = new Atores();
 		
 		Filme filme = new Filme(nome, data, orcamento, diretor, atores);
 		
@@ -32,6 +33,9 @@ public class ControleFilme {
 
 	//public ArrayList<Ator> cadastrarAtor() { 
 	//} (usar um while para cadastrar até o usuário não querer mais)
+	public void cadastrarAtores() {
+		atores.cadastrarAtores();
+	}
 
 	public void buscarNomeFilme() {
 
