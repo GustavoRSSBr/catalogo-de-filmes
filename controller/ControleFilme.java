@@ -38,14 +38,14 @@ public class ControleFilme {
 		System.out.println(filme.exibirInformacao());
 	}
 
-	public Diretor cadastrarDiretor() {
+	public void cadastrarDiretor() {
 		System.out.print("Digite o nome do diretor: ");
 		String nomeDiretor = sc.nextLine();
 		Diretor diretor = new Diretor(nomeDiretor);
-		return diretor;
+		//return diretor;
 	}
 
-	public ArrayList<Ator> cadastrarAtores() {
+	public void cadastrarAtores() {
 		ArrayList<Ator> listaAtores = new ArrayList<>();
 		while (true) {
 			System.out.println("------Cadastro de Atores-----");
@@ -59,7 +59,7 @@ public class ControleFilme {
 			System.out.print("Deseja cadastrar mais um ator? (S/N): ");
 			String resposta = sc.nextLine();
 			if (resposta.equalsIgnoreCase("N")) {
-				return listaAtores;
+				//return listaAtores;
 			}
 		}
 		
@@ -93,11 +93,10 @@ public class ControleFilme {
 	}
 
 	public static void listarAtores() {
-		//Método opcional
+		System.out.println("\nSistema em construção, funcionalidade não implementada.\n");
 	}
 
 	public static void listarDiretores() {
-		//Método opcional
+		System.out.println("\nSistema em construção, funcionalidade não implementada.\n");
 	}
-
 }
