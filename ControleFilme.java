@@ -44,4 +44,16 @@ public class ControleFilme {
 	public static void listarAtores() {}
 	public static void listarDiretores(){}
 
+		boolean encontrado = false;
+		for (Filme filme : listaFilmes) {
+			if (filme.getNome().equalsIgnoreCase(nomeBusca)) {
+				//METODO DO GUSTAVO
+				encontrado = true;
+				break;
+			}
+		}
+		if (encontrado == false) {
+			System.out.println("Não encontrado.");
+		}
+	}
 }
