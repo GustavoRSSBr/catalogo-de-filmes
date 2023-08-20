@@ -1,10 +1,13 @@
-import filme.ControleFilme;
+package view;
 import java.util.Scanner;
+
+import controller.ControleFilme;
 
 public class Main {
     public static void main(String[] args) {
         Scanner leituraTeclado = new Scanner(System.in);
         int opcaoMenuPrincipal = -1;
+        ControleFilme controle = new ControleFilme();
 
         do {
             limparTela();
@@ -29,19 +32,19 @@ public class Main {
                     }
                     switch (opcaoMenuSecundario){
                         case 1: // Listar Filmes
-                            limparTela();
-                            ControleFilme.listarFilmes();
-                            leituraTeclado.next();
+                            //limparTela();
+                            controle.listarFilmes();
+                            //leituraTeclado.next();
                             break;
                         case 2: // Cadastrar Filme
-                            limparTela();
-                            //ControleFilme.cadastrarFilme();
-                            leituraTeclado.next();
+                            //limparTela();
+                            controle.cadastrarFilme();
+                            //leituraTeclado.next();
                             break;
                         case 3: // Buscar Filme
-                            limparTela();
-                            //ControleFilme.buscarFilme();
-                            leituraTeclado.next();
+                            //limparTela();
+                            controle.buscarNomeFilme();
+                            //leituraTeclado.next();
                             break;
                         default:
                             break;
@@ -61,6 +64,8 @@ public class Main {
 
 
         } while (opcaoMenuPrincipal != 0);
+        
+        leituraTeclado.close();
     }
 
     public static void mostrarMenuPrincipal(){
@@ -106,5 +111,6 @@ public class Main {
         System.out.print("Informe a opção desejada: ");
     }
     public static void limparTela() {}
+    
 
 }
