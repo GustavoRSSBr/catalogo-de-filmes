@@ -1,4 +1,5 @@
-package view;
+package View;
+
 import java.util.Scanner;
 import controller.ControleFilme;
 
@@ -31,6 +32,8 @@ public class Main {
                     limparTela();
                     mostrarMenuDiretores();
                     break;
+                case 0:
+                    continue;
                 default:
                     break;
             }
@@ -56,14 +59,16 @@ public class Main {
                     controle.listarAtores();
                     break;
                 case 8: // Cadastrar novo ator
-                    controle.cadastrarAtores();
+                    //controle.cadastrarAtores();
                     break;
                 case 9: // Listar diretores
                     controle.listarDiretores();
                     break;
                 case 10: // Cadastrar novo diretor
-                    controle.cadatrarDiretor();
+                    //controle.cadatrarDiretor();
                     break;
+                case 0:
+                    continue;
                 default:
                     break;
             }
@@ -72,7 +77,7 @@ public class Main {
         leituraTeclado.close();
     }
     public static void mostrarMenuPrincipal(){
-        System.out.println("Catálogo de Filmes");
+        System.out.println("\n\nCatálogo de Filmes");
         System.out.println("1 - Filmes");
         System.out.println("2 - Atores");
         System.out.println("3 - Diretores");
@@ -81,7 +86,7 @@ public class Main {
     }
 
     public static void mostrarMenuFilmes(){
-        System.out.println("Catálogo de Filmes");
+        System.out.println("\n\nCatálogo de Filmes");
         System.out.println("1 - Filmes");
         System.out.println("   4 - Listar Filmes");
         System.out.println("   5 - Cadastrar Novo Filme");
@@ -94,7 +99,7 @@ public class Main {
         System.out.print("Informe a opção desejada: ");
     }
     public static void mostrarMenuAtores(){
-        System.out.println("Catálogo de Filmes");
+        System.out.println("\n\nCatálogo de Filmes");
         System.out.println("1 - Filmes");
         System.out.println("2 - Atores");
         System.out.println("   7 - Listar Atores");
@@ -107,7 +112,7 @@ public class Main {
         System.out.print("Informe a opção desejada: ");
     }
     public static void mostrarMenuDiretores(){
-        System.out.println("Catálogo de Filmes");
+        System.out.println("\n\nCatálogo de Filmes");
         System.out.println("1 - Filmes");
         System.out.println("2 - Atores");
         System.out.println("3 - Diretores");
@@ -120,7 +125,7 @@ public class Main {
         System.out.print("Informe a opção desejada: ");
     }
     public static void limparTela() {
-        /* Formato 1
+        // Formato 1
         try {
             final String os = System.getProperty("os.name");
             if (os.contains("Windows")) {
@@ -129,7 +134,6 @@ public class Main {
                 Runtime.getRuntime().exec("clear");
             }
         } catch (final Exception e) {}
-        */
 
         /* Formato 2
         System.out.print("\033[H\033[2J");
