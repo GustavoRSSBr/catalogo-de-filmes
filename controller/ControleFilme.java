@@ -88,7 +88,7 @@ public class ControleFilme {
 		boolean encontrado = false;
 		for (Filme f : listaFilmes) {
 			//if (f.getNome().equalsIgnoreCase(nomeBusca)) {
-			if (f.getNome().contains(nomeBusca)) {
+			if (f.getNome().toLowerCase().contains(nomeBusca.toLowerCase())) {
 				System.out.print(f.exibirInformacao());
 				encontrado = true;
 				break;
