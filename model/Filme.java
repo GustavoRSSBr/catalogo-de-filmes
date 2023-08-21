@@ -66,11 +66,11 @@ public class Filme {
 	}
 
 	public String exibirInformacao() {
-		return "Nome do Filme: " + this.nome +
+		return "\nNome do Filme: " + this.nome +
 				"\nData de Lançamento: " + this.dataLancamento +
 				"\nDescrição: " + this.descricao +
 				"\n" + diretor.toString() +
-				"\nAtores: " + atores.toString();
+				"\nAtores: " + atores.toString() + "\n";
  
 	}
 }

@@ -14,14 +14,21 @@ public class ControleFilme {
 
 	public void cadastrarFilme() {
 
-		System.out.print("Digite o nome do filme: ");
+		System.out.print("\nDigite o nome do filme: ");
 		String nome = sc.nextLine();
 
 		System.out.print("Digite a data de lançamento: ");
 		String data = sc.nextLine();
 
-		System.out.print("Digite o orçamento do filme: ");
-		double orcamento = Double.parseDouble(sc.nextLine());
+		double orcamento = -1;
+		do {
+			try {
+				System.out.print("Digite o orçamento do filme: ");
+				orcamento = Double.parseDouble(sc.nextLine());
+			} catch (Exception e) {
+				System.out.println("Valor inválido! Tente novamente.");
+			}
+		} while (orcamento == -1);
 
 		System.out.print("Digite a descrição do filme: ");
 		String descricao = sc.nextLine();
@@ -39,7 +46,7 @@ public class ControleFilme {
 	}
 
 	public Diretor cadastrarDiretor() {
-		System.out.print("Digite o nome do diretor: ");
+		System.out.print("\nDigite o nome do diretor: ");
 		String nomeDiretor = sc.nextLine();
 		Diretor diretor = new Diretor(nomeDiretor);
 		return diretor;
@@ -56,13 +63,23 @@ public class ControleFilme {
 			Ator novoAtor = new Ator(nomeAtor, nomePersonagem);
 			listaAtores.add(novoAtor);
 
-			System.out.print("Deseja cadastrar mais um ator? (S/N): ");
-			String resposta = sc.nextLine();
-			if (resposta.equalsIgnoreCase("N")) {
-				return listaAtores;
-			}
+			String resposta = "N";
+			boolean fim = false;
+			do {
+				System.out.print("Deseja cadastrar mais um ator? (S/N): ");
+				resposta = sc.nextLine();
+				if (resposta.equalsIgnoreCase("N")) {
+					fim = true;
+					return listaAtores;
+				} else if (resposta.equalsIgnoreCase("S")) {
+					fim = false;
+					break;
+				} else {
+					System.out.println("Opção inválida! Tente novamente.");
+					fim = false;
+				}
+			} while (!fim);
 		}
-		
 	}
 
 	public void buscarNomeFilme() {
@@ -70,7 +87,8 @@ public class ControleFilme {
 		String nomeBusca = sc.nextLine();
 		boolean encontrado = false;
 		for (Filme f : listaFilmes) {
-			if (f.getNome().equalsIgnoreCase(nomeBusca)) {
+			//if (f.getNome().equalsIgnoreCase(nomeBusca)) {
+			if (f.getNome().contains(nomeBusca)) {
 				System.out.print(f.exibirInformacao());
 				encontrado = true;
 				break;
@@ -78,13 +96,13 @@ public class ControleFilme {
 		}
 
 		if (encontrado == false) {
-			System.out.println("Filme não encontrado.");
+			System.out.println("\nFilme não encontrado.");
 		}
 	}
 
 	public void listarFilmes() {
 		if(listaFilmes.size() == 0) {
-			System.out.println("Nenhum filme cadastrado!");
+			System.out.println("\nNenhum filme cadastrado!");
 		}
 		for(Filme filmes : listaFilmes) {
 			System.out.println(filmes.exibirInformacao());

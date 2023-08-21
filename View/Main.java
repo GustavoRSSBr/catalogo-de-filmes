@@ -20,52 +20,17 @@ public class Main {
             }
 
             switch (opcaoMenu) {
-                case 1: // Filmes
+                case 1: // Novo Filme
                     limparTela();
-                    mostrarMenuFilmes();
-                    break;
-                case 2: // Atores
-                    limparTela();
-                    mostrarMenuAtores();
-                    break;
-                case 3: // Diretores
-                    limparTela();
-                    mostrarMenuDiretores();
-                    break;
-                case 0:
-                    continue;
-                default:
-                    break;
-            }
-
-            try {
-                opcaoMenu = Integer.parseInt(leituraTeclado.next());
-            } catch (Exception e) {
-                System.out.println("\nOpção inválida! Tente novamente.\n");
-                continue;
-            }
-
-            switch (opcaoMenu) {
-                case 4: // Listar filmes
-                    controle.listarFilmes();
-                    break;
-                case 5: // Cadastrar novo filme
                     controle.cadastrarFilme();
                     break;
-                case 6: // Buscar filme
+                case 2: // Listar Filmes
+                    limparTela();
+                    controle.listarFilmes();
+                    break;
+                case 3: // Buscar Filme
+                    limparTela();
                     controle.buscarNomeFilme();
-                    break;
-                case 7: // Listar atores
-                    controle.listarAtores();
-                    break;
-                case 8: // Cadastrar novo ator
-                    //controle.cadastrarAtores();
-                    break;
-                case 9: // Listar diretores
-                    controle.listarDiretores();
-                    break;
-                case 10: // Cadastrar novo diretor
-                    //controle.cadatrarDiretor();
                     break;
                 case 0:
                     continue;
@@ -77,16 +42,18 @@ public class Main {
         leituraTeclado.close();
     }
     public static void mostrarMenuPrincipal(){
-        System.out.println("\n\nCatálogo de Filmes");
-        System.out.println("1 - Filmes");
-        System.out.println("2 - Atores");
-        System.out.println("3 - Diretores");
+        System.out.println("\n---------------------");
+        System.out.println("CATÁLOGO DE FILMES");
+        System.out.println("1 - Cadastrar NOVO Filme");
+        System.out.println("2 - Listar Filmes");
+        System.out.println("3 - Buscar Filme");
         System.out.println("0 - Sair");
         System.out.print("Informe a opção desejada: ");
     }
 
+    /*
     public static void mostrarMenuFilmes(){
-        System.out.println("\n\nCatálogo de Filmes");
+        System.out.println("\nCatálogo de Filmes");
         System.out.println("1 - Filmes");
         System.out.println("   4 - Listar Filmes");
         System.out.println("   5 - Cadastrar Novo Filme");
@@ -99,7 +66,7 @@ public class Main {
         System.out.print("Informe a opção desejada: ");
     }
     public static void mostrarMenuAtores(){
-        System.out.println("\n\nCatálogo de Filmes");
+        System.out.println("\nCatálogo de Filmes");
         System.out.println("1 - Filmes");
         System.out.println("2 - Atores");
         System.out.println("   7 - Listar Atores");
@@ -112,7 +79,7 @@ public class Main {
         System.out.print("Informe a opção desejada: ");
     }
     public static void mostrarMenuDiretores(){
-        System.out.println("\n\nCatálogo de Filmes");
+        System.out.println("\nCatálogo de Filmes");
         System.out.println("1 - Filmes");
         System.out.println("2 - Atores");
         System.out.println("3 - Diretores");
@@ -124,6 +91,8 @@ public class Main {
         System.out.println("0 - Sair");
         System.out.print("Informe a opção desejada: ");
     }
+     */
+
     public static void limparTela() {
         // Formato 1
         try {
